@@ -1,0 +1,7 @@
+ECHO FMM_OUTPUT Installing Pelican ...
+
+cd mods\tagmods\pelican
+
+Type commands\pelican.cmds | TagTool.exe ..\..\..\maps\tags.dat
+
+ECHO FMM_OUTPUT Pelican Installation Complete!

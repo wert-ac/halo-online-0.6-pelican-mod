@@ -1,0 +1,231 @@
+createtag vehi
+createtag jmad
+createtag phmo
+createtag coll
+createtag mode
+createtag hlmt
+createtag vehi
+createtag vehi
+createtag mode
+createtag jmad
+createtag jmad
+createtag weap
+createtag lens
+createtag lens
+createtag lens
+createtag jpt!
+
+importtag 0x05ADF "Mod\pelican.vehi"
+importtag 0x05AE0 "Mod\pelican.jmad"
+importtag 0x0284A "Mod\pelican.phmo" 
+importtag 0x05AE2 "Mod\pelican.coll" 
+importtag 0x05AE3 "Mod\pelican.mode"   
+importtag 0x02834 "Mod\pelican.hlmt" use tag from assembly
+importtag 0x05AE5 "Mod\pelican_pod_left.vehi" 
+importtag 0x05AE6 "Mod\pelican_pod_right.vehi" 
+importtag 0x05AE7 "Mod\pelican_rocket_right.mode" 
+importtag 0x05AE8 "Mod\pelican_rocket_animation_left.jmad" 
+importtag 0x05AE9 "Mod\pelican_rocket_animation_right.jmad" 
+importtag 0x05AEA "Mod\pelican_rocket.weap" 
+importtag 0x05AEB "Mod\283b.lens" 
+importtag 0x05AEC "Mod\283c.lens" 
+importtag 0x05AED "Mod\283d.lens" 
+importtag 0x05AEE "Mod\285b.jpt!" 
+
+createtag effe
+importtag 0x05AEF "Mod\pelican_running.effe" 
+
+createtag weap
+importtag 0x05AF0 "Mod\pelican_rocket02.weap" 
+
+createtag effe
+importtag 0x05AF1 "Mod\pelican_rocket_firing_right.effe" 
+
+createtag effe
+importtag 0x05AF2 "Mod\pelican_rocket_firing_left.effe" 
+
+createtag effe
+createtag effe
+createtag effe
+createtag effe
+createtag effe
+createtag effe
+createtag effe
+
+importtag 0x05AF3 "Mod\2836.effe" 
+importtag 0x05AF4 "Mod\2835.effe" 
+importtag 0x05AF5 "Mod\2837" 
+importtag 0x05AF6 "Mod\2838" 
+importtag 0x05AF7 "Mod\2839" 
+importtag 0x05AF8 "Mod\2803" 
+importtag 0x05AF9 "Mod\2B09" 
+
+TagDependency add 0x05ADF 0x05AF3
+TagDependency add 0x05ADF 0x05AF4
+TagDependency add 0x05ADF 0x05AF5
+TagDependency add 0x05ADF 0x05AF6
+TagDependency add 0x05ADF 0x05AF7
+TagDependency add 0x05ADF 0x05AF8
+TagDependency add 0x05ADF 0x05AF9
+TagDependency add 0x05ADF 0x05AE4
+TagDependency add 0x05AE4 0x05AE0
+TagDependency add 0x05AE4 0x05AE5
+TagDependency add 0x05AE4 0x05AE6
+TagDependency add 0x05AE4 0x05AE1
+TagDependency add 0x05AE4 0x05AE2
+TagDependency add 0x05AE4 0x05AE3
+
+
+
+--- forge strings ---
+stringid add Pelican
+edittag 0x01221
+setstring english Pelican "Pelican"
+savetagchanges
+exit
+--- forge strings end ---
+
+
+---vehi---
+edittag 0x05ADF
+EditBlock attachments[7]
+setfield attachment2 0x05AEF
+savetagchanges
+exit
+EditBlock attachments[8]
+setfield attachment2 0x05AEF
+savetagchanges
+exit
+EditBlock seats[0]
+EditBlock cameratracks[0]
+setfield CameraTrack 0x05698
+exit
+exit
+EditBlock seats[0]
+setfield enterseatstring device_pelican
+savetagchanges
+exit
+exit
+edittag 0x05AE6
+EditBlock weapons[0]
+setfield weapon2 0x05AEA
+savetagchanges
+exit
+exit
+edittag 0x05AE5
+EditBlock weapons[0]
+setfield weapon2 0x05AF0
+savetagchanges
+exit 
+exit
+--- vehi end--- 
+
+
+---proj---
+edittag 0x02853
+EditBlock attachments[0]
+setfield attachment2 0x02CAC
+savetagchanges
+exit
+setfield AirborneDetonationEffect 0x0216D
+setfield GroundDetonationEffect 0x0216D
+savetagchanges
+exit 
+---proj end---
+
+
+---weap---
+edittag 0x05AEA
+setfield hudinterface 0x03CC9
+EditBlock barrels[0]
+EditBlock firingeffects[0]
+setfield firingresponse 0x0251D
+savetagchanges
+exit
+exit
+EditBlock barrels[0]
+EditBlock firingeffects[0]
+setfield firingeffect2 0x05AF1
+savetagchanges
+exit 
+exit
+exit
+edittag 0x05AF0
+EditBlock barrels[0]
+EditBlock firingeffects[0]
+setfield firingeffect2 0x05AF2
+savetagchanges
+exit
+exit 
+exit
+---weap end---
+
+
+---scnrs
+edittag 0x054E9
+AddBlockElements sandboxvehicles
+EditBlock sandboxvehicles[*]
+setfield object 0x05ADF
+setfield name pelican
+setfield maxallowed 255
+savetagchanges
+exit
+exit
+edittag 0x05247
+AddBlockElements sandboxvehicles
+EditBlock sandboxvehicles[*]
+setfield object 0x05ADF
+setfield name pelican
+setfield maxallowed 255
+savetagchanges
+exit
+exit
+edittag 0x04F14
+AddBlockElements sandboxvehicles
+EditBlock sandboxvehicles[*]
+setfield object 0x05ADF
+setfield name pelican
+setfield maxallowed 255
+savetagchanges
+exit
+exit
+edittag 0x04A08
+AddBlockElements sandboxvehicles
+EditBlock sandboxvehicles[*]
+setfield object 0x05ADF
+setfield name pelican
+setfield maxallowed 255
+savetagchanges
+exit
+exit
+edittag 0x03F83
+AddBlockElements sandboxvehicles
+EditBlock sandboxvehicles[*]
+setfield object 0x05ADF
+setfield name pelican
+setfield maxallowed 255
+savetagchanges
+exit 
+exit
+edittag 0x03a0e
+AddBlockElements sandboxvehicles
+EditBlock sandboxvehicles[*]
+setfield object 0x05ADF
+setfield name pelican
+setfield maxallowed 255
+savetagchanges
+exit
+exit
+edittag 0x03488
+AddBlockElements sandboxvehicles
+EditBlock sandboxvehicles[*]
+setfield object 0x05ADF
+setfield name pelican
+setfield maxallowed 255
+savetagchanges
+exit
+exit
+--- scnrs end---
+
+pause<null
+echo all done!
